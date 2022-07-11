@@ -1,0 +1,35 @@
+{
+  "name": "workout-logger-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwin1014/workout-logger-app.git"
+  },
+  "keywords": [
+    "MERN"
+  ],
+  "author": "Ashwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashwin1014/workout-logger-app/issues"
+  },
+  "homepage": "https://github.com/ashwin1014/workout-logger-app#readme",
+  "type": "module",
+  "devDependencies": {
+    "chalk": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
