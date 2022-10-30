@@ -1,25 +1,26 @@
-import express from 'express';
+import express from "express";
+
+import { 
+    createWorkout,
+    getAllWorkouts,
+    getSingleWorkout
+ } from "../controllers/workoutController.mjs";
+
 
 const workoutRoutes = express.Router();
 
-workoutRoutes.get('/', (_req, res) => {
-    res.json({msg: "Get all workouts"});
+workoutRoutes.get("/", getAllWorkouts);
+
+workoutRoutes.get("/:id", getSingleWorkout);
+
+workoutRoutes.post("/", createWorkout);
+
+workoutRoutes.delete("/:id", (_req, res) => {
+  res.json({ msg: "Delete a workout" });
 });
 
-workoutRoutes.get('/:id', (_req, res) => {
-    res.json({msg: "Get workout by id"});
-});
-
-workoutRoutes.post('/', (_req, res) => {
-    res.json({msg: "Create a new workout"});
-});
-
-workoutRoutes.delete('/:id', (_req, res) => {
-    res.json({msg: "Delete a workout"});
-});
-
-workoutRoutes.patch('/:id', (_req, res) => {
-    res.json({msg: "Update a workout"});
+workoutRoutes.patch("/:id", (_req, res) => {
+  res.json({ msg: "Update a workout" });
 });
 
 export default workoutRoutes;
